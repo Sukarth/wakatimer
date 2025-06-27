@@ -7,7 +7,7 @@ This script copies a coding project from source to destination while simulating 
 coding patterns including typing delays, debugging phases, and human-like behavior.
 
 Author: Sukarth Achaya
-Version: 2.0.1
+Version: 2.0.2
 """
 
 import os
@@ -50,7 +50,7 @@ def print_logo():
 ║                 Retroactive Time Tracking Data Generator                     ║
 ║                                                                              ║
 ║                           By: Sukarth Achaya                                 ║
-║                              Version 2.0.1                                   ║
+║                              Version 2.0.2                                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
     """
@@ -631,7 +631,7 @@ class CodingSimulator:
             current_elapsed = time.time() - self.start_time if hasattr(self, 'start_time') else 0
 
             state = {
-                'version': '2.0.1',  
+                'version': '2.0.2',  
                 'checksum': None,    # Will be calculated below
                 'session_id': self.session_state['session_id'],
                 'source_dir': str(self.source_dir),
@@ -1706,18 +1706,18 @@ def main():
         epilog="""
 Examples:
   # Auto mode - automatically determine coding time
-  python wakatimer_simulator.py /path/to/source /path/to/dest --mode auto
+  wakatimer /path/to/source /path/to/dest --mode auto
 
   # Manual mode - specify exact coding time
-  python wakatimer_simulator.py /path/to/source /path/to/dest --mode manual --hours 14.5
+  wakatimer /path/to/source /path/to/dest --mode manual --hours 14.5
 
   # Quick test with 2 hours
-  python wakatimer_simulator.py ./my_project ./simulated_project --mode manual --hours 2
+  wakatimer ./my_project ./simulated_project --mode manual --hours 2
         """
     )
 
-    parser.add_argument("source", help="Source directory containing the coding project")
-    parser.add_argument("dest", help="Destination directory for simulated project")
+    parser.add_argument("source", nargs="?", help="Source directory containing the coding project")
+    parser.add_argument("dest", nargs="?", help="Destination directory for simulated project")
     parser.add_argument("--mode", choices=["auto", "manual"], default="auto",
                        help="Simulation mode (default: auto)")
     parser.add_argument("--hours", type=float,
@@ -1748,8 +1748,12 @@ Examples:
 
     if getattr(args, 'version', False):
         print_logo()
-        print('Wakatimer Version:', '2.0.1')
+        print('Wakatimer Version:', '2.0.2')
         return 0
+
+    if not args.source or not args.dest:
+        parser.print_help()
+        parser.exit(1)
 
     # Validation
     if args.mode == "manual" and args.hours is None:

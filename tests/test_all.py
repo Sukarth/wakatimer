@@ -1200,7 +1200,7 @@ def test_load_session_state_missing_timeline_events(sim):
     """Test lines 810-811: Handle missing timeline_events in session state"""
     # Create a session state without timeline_events key
     state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test_session',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -1234,7 +1234,7 @@ def test_load_session_backup_restore_failure(sim):
     # Create valid backup file without timeline_events (triggers line 810-811)
     backup_file = sim.resume_file.with_suffix('.bak')
     state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test_session',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -1497,7 +1497,7 @@ def test_session_state_validation_missing_fields(sim):
     """Test session file validation with missing required fields"""
     # Create session file with missing required fields
     incomplete_state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test',
         # Missing 'source_dir', 'dest_dir', 'mode'
     }
@@ -1801,7 +1801,7 @@ def test_load_session_state_backup_missing_timeline(tmp_path, mocker):
     sim.resume_file.write_text("corrupted")
     backup_file = sim.resume_file.with_suffix('.bak')
     state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test_session',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -2361,7 +2361,7 @@ class TestFinalCoverage:
         # Create session without timeline_events
         import pickle
         session_data = {
-            'version': '2.0.1',
+            'version': '2.0.2',
             'session_id': 'test_no_timeline',
             'source_dir': str(src_dir),
             'dest_dir': str(dest_dir),
@@ -2753,7 +2753,7 @@ def test_backup_restore_exact_lines_835_842(sim):
     
     # State that passes initial restore but fails timeline validation (triggers lines 835-838)
     invalid_state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -2917,7 +2917,7 @@ def test_restore_from_backup_and_load_session_exception(sim, capsys):
     # Create a valid backup file
     backup_file = sim.resume_file.with_suffix('.bak')
     state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test_session',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -3622,7 +3622,7 @@ def test_lines_810_811_missing_timeline_events(sim):
     """Test lines 810-811: Handle missing timeline_events key"""
     # Create session state without timeline_events
     state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -3657,7 +3657,7 @@ def test_lines_835_838_840_842_backup_restore_exceptions(sim):
     
     # Test backup restore success then validation failure (lines 835-838)
     state_without_timeline = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),
@@ -3788,7 +3788,7 @@ def test_session_restore_complex_scenarios(sim):
     
     backup_file = sim.resume_file.with_suffix('.bak')
     valid_state = {
-        'version': '2.0.1',
+        'version': '2.0.2',
         'session_id': 'test',
         'source_dir': str(sim.source_dir),
         'dest_dir': str(sim.dest_dir),

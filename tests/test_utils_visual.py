@@ -66,7 +66,7 @@ class TestPrintLogo:
         captured = capsys.readouterr()
         
         assert "WAKATIMER" in captured.out
-        assert "Version 2.0.1" in captured.out
+        assert "Version 2.0.2" in captured.out
         assert "Sukarth Achaya" in captured.out
         assert "Retroactive Time Tracking Data Generator" in captured.out
         assert "╔" in captured.out  # Check for box drawing characters

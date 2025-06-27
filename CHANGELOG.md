@@ -1,5 +1,10 @@
 # Changelog
 
+## [2.0.2] - 2025-06-27
+
+### 🔧 Improvements
+- Updated command usage in main function and improved argument handling
+
 ## [2.0.1] - 2025-06-26
 
 ### 🧪 Testing Improvements & Documentation
