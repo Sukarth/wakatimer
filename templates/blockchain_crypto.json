@@ -1,0 +1,17 @@
+{
+  "name": "Blockchain & Crypto",
+  "description": "Smart contracts and DeFi",
+  "file_priorities": {
+    "contracts": ["*.sol", "*.rs"],
+    "scripts": ["*.js", "*.ts"],
+    "frontend": ["*.js", "*.ts", "*.html"],
+    "tests": ["*test*"]
+  },
+  "typing_speed_multipliers": {
+    "Solidity": 0.7,
+    "Rust": 0.8,
+    "JavaScript": 1.1
+  },
+  "refactoring_probability": 0.4,
+  "debugging_probability": 0.3
+}

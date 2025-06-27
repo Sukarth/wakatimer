@@ -1,0 +1,17 @@
+{
+  "name": "Cybersecurity",
+  "description": "Security tools and penetration testing",
+  "file_priorities": {
+    "tools": ["*.py", "*.sh"],
+    "exploits": ["*exploit*"],
+    "analysis": ["*.log", "*.txt"],
+    "reports": ["*.md", "*.pdf"]
+  },
+  "typing_speed_multipliers": {
+    "Python": 0.9,
+    "Shell": 1.0,
+    "Assembly": 0.7
+  },
+  "refactoring_probability": 0.2,
+  "debugging_probability": 0.3
+}

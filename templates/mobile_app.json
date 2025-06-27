@@ -1,0 +1,19 @@
+{
+  "name": "Mobile App",
+  "description": "iOS/Android mobile development",
+  "file_priorities": {
+    "config": ["*.json", "*.yml", "*.xml"],
+    "core": ["*.kt", "*.swift", "*.java", "*.dart"],
+    "ui": ["*.xml", "*.storyboard"],
+    "platform": ["*.gradle", "*.plist"],
+    "tests": ["*test*"]
+  },
+  "typing_speed_multipliers": {
+    "Kotlin": 0.8,
+    "Swift": 0.8,
+    "Java": 0.9,
+    "Dart": 1.0
+  },
+  "refactoring_probability": 0.4,
+  "debugging_probability": 0.3
+}

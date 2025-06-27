@@ -1,0 +1,17 @@
+{
+  "name": "Machine Learning",
+  "description": "ML models and AI research",
+  "file_priorities": {
+    "notebooks": ["*.ipynb"],
+    "models": ["*model*"],
+    "data": ["*.csv", "*.json"],
+    "training": ["*train*"],
+    "evaluation": ["*eval*"]
+  },
+  "typing_speed_multipliers": {
+    "Python": 0.8,
+    "Jupyter": 0.7
+  },
+  "refactoring_probability": 0.4,
+  "debugging_probability": 0.3
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Desktop Application",
+  "description": "Cross-platform desktop apps",
+  "file_priorities": {
+    "config": ["*.json", "*.yml"],
+    "core": ["*.py", "*.js", "*.ts", "*.cs"],
+    "ui": ["*.qml", "*.ui", "*.xml"],
+    "components": ["*component*"],
+    "resources": ["*.png", "*.jpg", "*.ico"]
+  },
+  "typing_speed_multipliers": {
+    "Python": 1.0,
+    "JavaScript": 1.1,
+    "C#": 0.9
+  },
+  "refactoring_probability": 0.3,
+  "debugging_probability": 0.2
+}

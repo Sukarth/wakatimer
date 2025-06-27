@@ -1,0 +1,62 @@
+# Python binary files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# IDE settings
+.vscode/
+.qodo
+
+# Coverage and Cache
+.coverage
+.pytest_cache/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Test cache
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Environment files
+.env
+*.env
+.venv/
+venv/
+env/
+
+# VSCode settings
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Ignore session and analytics folders
+WakatimerSessions/
+analytics/
+
+# Ignore test outputs
+*.tmp
+*.bak
+
+# Ignore output/simulation directories
+simulated_project/
+output/

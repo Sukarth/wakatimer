@@ -1,0 +1,18 @@
+{
+  "name": "Backend API",
+  "description": "REST APIs and microservices",
+  "file_priorities": {
+    "config": ["*.json", "*.yml", "*.env"],
+    "models": ["*model*"],
+    "routes": ["*route*", "*.py"],
+    "middleware": ["*middleware*"],
+    "tests": ["*test*"]
+  },
+  "typing_speed_multipliers": {
+    "Python": 1.0,
+    "Go": 0.9,
+    "JavaScript": 1.1
+  },
+  "refactoring_probability": 0.5,
+  "debugging_probability": 0.3
+}

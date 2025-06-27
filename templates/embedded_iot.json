@@ -1,0 +1,16 @@
+{
+  "name": "Embedded & IoT",
+  "description": "Embedded systems and IoT devices",
+  "file_priorities": {
+    "config": ["*.json", "*.yml"],
+    "drivers": ["*driver*"],
+    "firmware": ["*.c", "*.cpp", "*.hex"],
+    "protocols": ["*protocol*"]
+  },
+  "typing_speed_multipliers": {
+    "C": 0.7,
+    "C++": 0.8
+  },
+  "refactoring_probability": 0.3,
+  "debugging_probability": 0.4
+}

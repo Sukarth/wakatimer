@@ -1,0 +1,17 @@
+{
+  "name": "DevOps & Infrastructure",
+  "description": "Infrastructure as Code, CI/CD",
+  "file_priorities": {
+    "config": ["*.yml", "*.json"],
+    "infrastructure": ["*.tf", "*.yaml"],
+    "containers": ["Dockerfile", "docker-compose.yml"],
+    "scripts": ["*.sh", "*.ps1"]
+  },
+  "typing_speed_multipliers": {
+    "YAML": 1.2,
+    "JSON": 1.1,
+    "Terraform": 0.8
+  },
+  "refactoring_probability": 0.3,
+  "debugging_probability": 0.2
+}

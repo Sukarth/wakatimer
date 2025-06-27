@@ -1,0 +1,16 @@
+{
+  "name": "My Custom Template",
+  "description": "Custom project workflow. Edit this file to customize your simulation template.",
+  "file_priorities": {
+    "config": ["*.json", "*.yml"],
+    "core": ["*.py", "*.js"],
+    "tests": ["*test*"],
+    "docs": ["*.md"]
+  },
+  "typing_speed_multipliers": {
+    "Python": 0.9,
+    "JavaScript": 1.1
+  },
+  "refactoring_probability": 0.3,
+  "debugging_probability": 0.2
+}
