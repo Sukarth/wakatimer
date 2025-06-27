@@ -1742,8 +1742,14 @@ Examples:
                        help="Disable research pause simulation")
     parser.add_argument("--no-copy-paste", action="store_true",
                        help="Disable copy-paste speed simulation")
+    parser.add_argument('--version', action='store_true', help='Show program version and logo')
 
     args = parser.parse_args()
+
+    if getattr(args, 'version', False):
+        print_logo()
+        print('Wakatimer Version:', '2.0.1')
+        return 0
 
     # Validation
     if args.mode == "manual" and args.hours is None:
